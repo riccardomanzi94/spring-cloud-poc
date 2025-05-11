@@ -1,0 +1,27 @@
+server:
+  port: 3333
+
+spring:
+  config:
+    import: configserver:http://localhost:1111
+  application:
+    name: manzi-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+      - id: MANZI-CUSTOMER-SERVICE
+        uri: localhost:8445
+        predicates:
+        - Path=/customer
+      - id: MANZI-ORDER-SERVICE
+        uri: localhost:8444
+        predicates:
+        - Path=/order
+      - id: MANZI-USER-SERVICE
+        uri: localhost:8443
+        predicates:
+        - Path=/user

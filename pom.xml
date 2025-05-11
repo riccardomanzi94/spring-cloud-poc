@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.eainde</groupId>
+    <groupId>com.manzi</groupId>
     <artifactId>spring-cloud-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -20,12 +20,12 @@
     </properties>
 
     <modules>
-        <module>eainde-config-server</module>
-        <module>eainde-customer-service</module>
-        <module>eainde-discovery-server</module>
-        <module>eainde-order-service</module>
-        <module>eainde-user-service</module>
-        <module>eainde-gateway</module>
+        <module>manzi-config-server</module>
+        <module>manzi-customer-service</module>
+        <module>manzi-discovery-server</module>
+        <module>manzi-order-service</module>
+        <module>manzi-user-service</module>
+        <module>manzi-gateway</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,32 @@
+package com.manzi.user.service;
+
+import com.manzi.user.entity.User;
+import com.manzi.user.repository.UserRepository;
+
+import java.util.List;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+  private final UserRepository repository;
+
+  UserService(final UserRepository repository) {
+    this.repository = repository;
+  }
+
+  public User findById(int id) {
+    return repository.findById(id);
+  }
+
+  public List<User> findAll() {
+    return repository.findAll();
+  }
+
+  public void add(User user) {
+    repository.add(user);
+  }
+
+  public User update(User user) {
+    return repository.update(user);
+  }
+}
